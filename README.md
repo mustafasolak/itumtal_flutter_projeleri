@@ -1,2 +1,2 @@
 # itumtal_flutter_projeleri
- İTÜ MTAL'de 2021-2022 Mobil Programlama dersi projeleridir.
+ İTÜ MTAL'de Mobil Programlama dersi projeleridir.
