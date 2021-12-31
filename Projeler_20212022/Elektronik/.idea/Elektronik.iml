@@ -6,6 +6,9 @@
       <excludeFolder url="file://$MODULE_DIR$/elektronik_proje/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/elektronik_proje/build" />
       <excludeFolder url="file://$MODULE_DIR$/elektronik_proje/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/WidgetDenemelerim/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/WidgetDenemelerim/build" />
+      <excludeFolder url="file://$MODULE_DIR$/WidgetDenemelerim/.pub" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
