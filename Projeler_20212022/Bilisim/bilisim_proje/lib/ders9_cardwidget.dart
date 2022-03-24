@@ -4,6 +4,7 @@ void main(){
   runApp(CardWidget());
 }
 
+// açıklama satırı
 class CardWidget extends StatelessWidget {
   const CardWidget({Key? key}) : super(key: key);
 
@@ -14,6 +15,8 @@ class CardWidget extends StatelessWidget {
         appBar: AppBar(
           title: Text("CardWidget"),
         ),
+		
+		
         body: ListView(
           children: [
             Card(
