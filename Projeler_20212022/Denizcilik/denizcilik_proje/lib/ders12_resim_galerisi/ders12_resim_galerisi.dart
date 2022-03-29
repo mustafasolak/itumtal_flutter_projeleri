@@ -1,20 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Ders11_3_ResimGalerisi extends StatefulWidget {
-  const Ders11_3_ResimGalerisi({Key? key}) : super(key: key);
+class Ders12_Resim_Galerisi extends StatelessWidget {
+  const Ders12_Resim_Galerisi({Key? key}) : super(key: key);
 
-  @override
-  _Ders11_3_ResimGalerisiState createState() => _Ders11_3_ResimGalerisiState();
-}
-
-class _Ders11_3_ResimGalerisiState extends State<Ders11_3_ResimGalerisi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "Resim Galerisi",
-        ),
+        title: Text("Resim Galerisi Ana Sayfa"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -22,15 +15,13 @@ class _Ders11_3_ResimGalerisiState extends State<Ders11_3_ResimGalerisi> {
           children: [
             Row(
               children: [
-                // Araba Resimleri için
                 Expanded(
                   child: GestureDetector(
                     onTap: (){
-                      print("araba tıklandı");
-                      Navigator.pushNamed(context, "/rg_resim_gosterici");
+                      Navigator.pushNamed(context, "/ders12_resimgoster");
                     },
                     child: Card(
-                      elevation: 20,
+                      elevation: 10,
                       child: Container(
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
@@ -47,21 +38,20 @@ class _Ders11_3_ResimGalerisiState extends State<Ders11_3_ResimGalerisi> {
                     ),
                   ),
                 ),
-                // Hayvan Resimleri için
                 Expanded(
                   child: GestureDetector(
                     onTap: (){
-                      print("hayvan tıklandı");
+                      Navigator.pushNamed(context, "/ders12_resimgoster");
                     },
                     child: Card(
-                      elevation: 20,
+                      elevation: 10,
                       child: Container(
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                         ),
                         child: Column(
                           children: [
-                            Image.asset("assets/hayvan/hayvan3.jpg"),
+                            Image.asset("assets/hayvan/hayvan1.jpg"),
                             SizedBox(height: 10,),
                             Text("Hayvan Resimleri"),
                             SizedBox(height: 10,),
@@ -73,40 +63,16 @@ class _Ders11_3_ResimGalerisiState extends State<Ders11_3_ResimGalerisi> {
                 ),
               ],
             ),
+            SizedBox(height: 15,),
             Row(
               children: [
-                // Çiçek Resimleri için
                 Expanded(
                   child: GestureDetector(
                     onTap: (){
-                      print("çiçek tıklandı");
+                      Navigator.pushNamed(context, "/ders12_resimgoster");
                     },
                     child: Card(
-                      elevation: 20,
-                      child: Container(
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                        ),
-                        child: Column(
-                          children: [
-                            Image.asset("assets/cicek/cicek1.jpg"),
-                            SizedBox(height: 10,),
-                            Text("Çiçek Resimleri"),
-                            SizedBox(height: 10,),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                // Şehir Resimleri için
-                Expanded(
-                  child: GestureDetector(
-                    onTap: (){
-                      print("şehir tıklandı");
-                    },
-                    child: Card(
-                      elevation: 20,
+                      elevation: 10,
                       child: Container(
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
@@ -123,11 +89,37 @@ class _Ders11_3_ResimGalerisiState extends State<Ders11_3_ResimGalerisi> {
                     ),
                   ),
                 ),
+                Expanded(
+                  child: GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, "/ders12_resimgoster");
+                    },
+                    child: Card(
+                      elevation: 10,
+                      child: Container(
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset("assets/cicek/cicek4.jpg"),
+                            SizedBox(height: 10,),
+                            Text("Çiçek Resimleri"),
+                            SizedBox(height: 10,),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
+
+
+
           ],
         ),
-      )
+      ),
     );
   }
 }

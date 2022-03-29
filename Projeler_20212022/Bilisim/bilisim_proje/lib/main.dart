@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'ders11_stateful_widget/ders11_3_resim_galerisi.dart';
+import 'ders11_stateful_widget/ders11_4_resim_goster.dart';
 
 void main() {
   runApp(
@@ -12,6 +13,7 @@ void main() {
         "/ders11_sayac" : (context) => Ders11_SayacUygulamasi(),
         "/ders11_2_hesapmakinesi" : (context) => Ders11_2_HesapMakinesi(),
         "/ders11_3_resimgalerisi" : (context) => Ders11_3_ResimGalerisi(),
+        "/rg_resim_gosterici" : (context) => ResimGosterici(),
       },
       initialRoute: "/ders11_3_resimgalerisi",
     )
