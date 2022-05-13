@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "608701871465",
+    "project_id": "it-quiz-application",
+    "storage_bucket": "it-quiz-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608701871465:android:6ba5068f7b842c135a39f8",
+        "android_client_info": {
+          "package_name": "com.example.elektronik_bilgi_yarismasi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608701871465-9gof1bamkafv2m0teeaehoaena0dpja3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDA0w5vqvMOcOBizOIr3fgDxqsUpCiM5nY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "608701871465-9gof1bamkafv2m0teeaehoaena0dpja3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
