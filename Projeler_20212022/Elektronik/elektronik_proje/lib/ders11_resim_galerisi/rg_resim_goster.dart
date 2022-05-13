@@ -1,26 +1,41 @@
 import 'package:flutter/material.dart';
 
-class ResimGostericiSayfasi extends StatelessWidget {
+class ResimGostericiSayfasi extends StatefulWidget {
   ResimGostericiSayfasi(this.gelenSayfaAdi);
 
   String gelenSayfaAdi = "";
 
+  @override
+  State<ResimGostericiSayfasi> createState() => _ResimGostericiSayfasiState();
+}
+
+class _ResimGostericiSayfasiState extends State<ResimGostericiSayfasi> {
   var isimler = {
-    "cicek" : "Çiçek Resimleri",
-    "araba" : "Araba Resimleri",
-    "hayvan" : "Hayvan Resimleri",
-    "sehir" : "Şehir Resimleri",
+    "cicek": "Çiçek Resimleri",
+    "araba": "Araba Resimleri",
+    "hayvan": "Hayvan Resimleri",
+    "sehir": "Şehir Resimleri",
   };
+
   String? metin = "";
+
+  String resimYolu = "";
+
+  int sayac = 1;
+  int toplamResimSayisi = 4;
+
   Widget build(BuildContext context) {
-    print("Gelen sayfa : $gelenSayfaAdi");
-    if(gelenSayfaAdi != null){
-      metin = isimler[gelenSayfaAdi];
+    print("Gelen sayfa : ${widget.gelenSayfaAdi}");
+    if (widget.gelenSayfaAdi != null) {
+      metin = isimler[widget.gelenSayfaAdi];
+      resimYolu = "assets/${widget.gelenSayfaAdi}/" +
+          widget.gelenSayfaAdi +
+          sayac.toString() +
+          ".jpg";
+      print("Resim Yolu : $resimYolu");
     }
     return Scaffold(
-        appBar: AppBar(
-            title: Text("Resim Gösterme Sayfası")
-        ),
+        appBar: AppBar(title: Text("Resim Gösterme Sayfası")),
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(16.0),
@@ -38,8 +53,7 @@ class ResimGostericiSayfasi extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        Image.asset("assets/cicek/cicek1.jpg",fit: BoxFit.cover),
-
+                        Image.asset(resimYolu, fit: BoxFit.cover),
                       ],
                     ),
                   ),
@@ -47,15 +61,32 @@ class ResimGostericiSayfasi extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ElevatedButton(onPressed: (){}, child: Text("Önceki"),),
-                    Text("1/10"),
-                    ElevatedButton(onPressed: (){}, child: Text("Sonraki"),),
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          sayac--;
+                          if (sayac <= 0) sayac = toplamResimSayisi;
+                          print(sayac);
+                        });
+                      },
+                      child: Text("Önceki"),
+                    ),
+                    Text("$sayac/$toplamResimSayisi"),
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          sayac++;
+                          if (sayac > toplamResimSayisi) sayac = 1;
+                          print(sayac);
+                        });
+                      },
+                      child: Text("Sonraki"),
+                    ),
                   ],
                 )
               ],
             ),
           ),
-        )
-    );
+        ));
   }
 }
